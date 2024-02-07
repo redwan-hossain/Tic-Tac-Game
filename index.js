@@ -3,6 +3,8 @@ let resetBtn = document.querySelector("#resetBtn");
 let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+let main_class = document.querySelector(".main_class");
+
 
 let turnO = true; 
 let count = 0;
@@ -23,6 +25,7 @@ const resetGame = () => {
   count = 0;
   enableBoxes();
   msgContainer.classList.add("hide");
+  main_class.classList.remove("hidee");
 };
 
 allBoxes.forEach((box) => {
@@ -69,6 +72,7 @@ const enableBoxes = () => {
 const showWinner = (winner) => {
   msg.innerText = `তৈরি কৃত রিদওয়ান হোসাইন এর পক্ষ থেকে আপনাকে অভিনন্দন   (${winner})`;  //Developer Redwan Congratulates you, Winner ${winner}
   msgContainer.classList.remove("hide");
+  main_class.classList.add("hidee");
   disableBoxes();
 };
 
